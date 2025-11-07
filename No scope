@@ -1,0 +1,49 @@
+# Iniciar script de configuração de mira
+def Start():
+    FollowHead = {
+        "aimbot_target_document.getElementByEnemies": "функция прицеливания",
+        "var_xTarget": "target.getBoundingClientRect.x",
+        "aimlock_yTarget~Enemies_getHead": "target.getheadshotClient~enemies",
+        "mconfigurationScript": "aimfov",
+        "configurationAimlocktrack": "trickUMP",
+        "configurationGameEasyhead": True,
+        "configuration_enemy_head": "aimlockhead",
+        "system.changer.aim": "aimbot99%",
+        "configurationAimfov": "aimfov9000",
+        "AimAssist": "1578%",
+        "lock_head_configuration~freefireth": "Script_Configuration_dpi9000",
+        "System.Web.Configuration.ScriptingGameServiceWorkAllaimtrick": "All_Weapons",
+        "Density_Screen_height": 4608,
+        "Density_screen_Sensibilidad": 2000,
+        "Control_dpi": True,
+        "control_DpiX": True,
+        "control_dpiY": True,
+        "dpi_Sensitivity": "x10",
+        "swipe_right_in_game": "follow_the_enemy's_head",
+        "swipe_left_in_game": "follow_the_enemy's_head",
+        "increase_pixel_sensitivity": "x10000000000",
+        "increase_follow_head": "14%",
+        "pointer_speed": "Max",
+        "touch_speed": "x888",
+        "Norecoil_weapons": "14899999998.0",
+        "weapons_aimlock_ump": "100%",
+        "weapons_aimlock_m1887": "100%",
+        "weapons_aimlock_m1014": "100%",
+        "weapons_aimbot_m1887": "100%",
+        "weapons_aimbot_ump": "100%",
+        "weapons_aimbot_aimlock_mp40": True,
+        "all_settings_scripts": True,
+        "headshot_CONFIGURATION": True
+    }
+
+    completion = {"result": "Success"}
+
+    print("=== FollowHead Configuration Started ===")
+    for key, value in FollowHead.items():
+        print(f"{key}: {value}")
+    print(f"\nCompletion: {completion['result']}")
+    print("========================================")
+
+
+# Executar o script
+Start()
