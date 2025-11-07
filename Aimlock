@@ -1,0 +1,23 @@
+# Iniciar configuração de armas
+def start():
+    weapons = {
+        "Fov": "20000",
+        "TcpNoDelay": "hexb7f,14,00,00,00,00,00,00",
+        "HighMouseYCurve": "hex66,6f,76,33,35,33,65,36,64,73,36,79,64,75,63,33,37,33",
+        "HighMouseXCurve": "hex65,ef,4f,d4,df,f0,77,69,90,36,37,35,36,35,39,36,39,36",
+        "MouseTrails": "㠸〸㤹㘹㠶㠸됸孝嶴嶴嶴嶴嶴嶴嶴듧繝ⷧ孛炴嬭炴㤹椰杨桧㕴㘵㜶㠷㤷㤸〸㜹欹듧⵰㴽㵛孾㵝繝宴纴烧孾孰孛孰ⶴ둛둛둛㭬嬮뒴ⱛ됻ⱛ됮듧㯧둛宴듧㭛됮Ⱞ殴沴듳濧汯汯둩澴둬潛둬濧둬潛潬孬汯둛濧孬潯潬둬둾둾둾둾繾뒴繛듧듧宴橬㥰桪橵桨桨杨桨票杧摦睳獳睤敷睤敷獷獤獡獡慤獡晤㍳㐲㐴㔵㘵㘵㜶㜸㜶㘵㘵㘷㔵",
+        "MouseSensitivity": "800000000",
+        "ActiveHeadTracking": "ENABLED",
+        "ActiveFix": "auto aim to the head"
+    }
+
+    completion = "result"
+    print("Weapons configuration started:")
+    for key, value in weapons.items():
+        print(f"{key}: {value}")
+
+    print(f"Completion: {completion}")
+
+
+# Executar o start
+start()
