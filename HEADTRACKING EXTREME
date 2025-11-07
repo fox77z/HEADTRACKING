@@ -1,0 +1,87 @@
+import Foundation
+
+// ===========================
+//  Estrutura de Sensibilidade
+// ===========================
+struct SensitivitySettings: Codable {
+    var view: Float
+    var scope1x: Float
+    var scope2x: Float
+    var scope4x: Float
+    var scope8x: Float
+    var dpi: Float
+    var fov: Int
+}
+
+// ===========================
+//  Estrutura de Configuração da Arma
+// ===========================
+struct ArmaConfig: Codable {
+    var name: String
+    var boost: Bool
+    var aimBot: Bool
+    var noRecoil: Bool
+    var sensitivity: SensitivitySettings
+    var aimValue: Float
+}
+
+// ===========================
+//  Função para iniciar arma
+// ===========================
+func iniciarArma(config: ArmaConfig) {
+    print("🔫 Iniciando arma: \(config.name)")
+    
+    if config.boost {
+        print("⚡ Boost ativado com sensibilidade:", config.sensitivity)
+        // Aqui você escreveria no plist ou hook direto
+    }
+    
+    if config.aimBot {
+        print("🎯 AimBot ativado com valor:", config.aimValue)
+        // Hook AimLock
+    }
+    
+    if config.noRecoil {
+        print("🔒 No Recoil ativado")
+        // Hook para remover recuo
+    }
+    
+    print("✅ Configuração final aplicada para \(config.name)")
+}
+
+// ===========================
+//  Configurações Padrão por Arma
+// ===========================
+let armas: [ArmaConfig] = [
+    ArmaConfig(
+        name: "UMP",
+        boost: true,
+        aimBot: true,
+        noRecoil: true,
+        sensitivity: SensitivitySettings(view: 0.7, scope1x: 0.7, scope2x: 0.68, scope4x: 0.65, scope8x: 0.63, dpi: 99, fov: 360),
+        aimValue: 0.45
+    ),
+    ArmaConfig(
+        name: "M1014",
+        boost: true,
+        aimBot: true,
+        noRecoil: true,
+        sensitivity: SensitivitySettings(view: 0.75, scope1x: 0.73, scope2x: 0.7, scope4x: 0.68, scope8x: 0.65, dpi: 100, fov: 360),
+        aimValue: 0.5
+    ),
+    ArmaConfig(
+        name: "XM8",
+        boost: true,
+        aimBot: true,
+        noRecoil: true,
+        sensitivity: SensitivitySettings(view: 0.72, scope1x: 0.7, scope2x: 0.68, scope4x: 0.66, scope8x: 0.64, dpi: 99, fov: 360),
+        aimValue: 0.48
+    )
+]
+
+// ===========================
+//  Exemplo de uso
+// ===========================
+for arma in armas {
+    iniciarArma(config: arma)
+}
