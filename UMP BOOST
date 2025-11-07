@@ -1,0 +1,69 @@
+// ===========================
+//  Configurações Gerais
+// ===========================
+struct SensitivitySettings {
+    var view: Float = 0.70
+    var scope1x: Float = 0.70
+    var scope2x: Float = 0.70
+    var scope4x: Float = 0.70
+    var scope8x: Float = 0.70
+    var dpi: Float = 99.0
+    var fov: Int = 360
+}
+
+// ===========================
+//  Boost UMP
+// ===========================
+struct BoostUMP {
+    var isActive: Bool = false
+    var sensitivity: SensitivitySettings
+
+    mutating func start() {
+        self.isActive = true
+        print("✅ Boost UMP iniciado com sensibilidade:", sensitivity)
+        // Aqui você aplicaria o hook para modificar os valores do jogo
+    }
+}
+
+// ===========================
+//  AimLock / AimBot
+// ===========================
+struct AimBot {
+    var isActive: Bool = false
+    var aimValue: Float = 0.45 // 45% de precisão por exemplo
+
+    mutating func start() {
+        self.isActive = true
+        print("🎯 AimBot iniciado com valor:", aimValue)
+        // Aqui aplicaria o hook para ativar AimLock
+    }
+}
+
+// ===========================
+//  No Recoil
+// ===========================
+struct NoRecoil {
+    var isActive: Bool = false
+
+    mutating func start() {
+        self.isActive = true
+        print("🔫 No Recoil ativado")
+        // Hook para remover recuo
+    }
+}
+
+// ===========================
+//  Uso
+// ===========================
+
+// Configurar Boost UMP
+var boostUMP = BoostUMP(sensitivity: SensitivitySettings())
+boostUMP.start() // start do boost
+
+// Configurar AimBot
+var aimBot = AimBot()
+aimBot.start() // start do AimLock
+
+// Configurar No Recoil
+var noRecoil = NoRecoil()
+noRecoil.start() // start do No Recoil
