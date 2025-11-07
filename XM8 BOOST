@@ -1,0 +1,69 @@
+// ===========================
+//  Configurações Gerais
+// ===========================
+struct SensitivitySettings {
+    var view: Float = 0.70       // visão normal
+    var scope1x: Float = 0.70    // 1x scope
+    var scope2x: Float = 0.68    // 2x scope
+    var scope4x: Float = 0.65    // 4x scope
+    var scope8x: Float = 0.63    // 8x scope
+    var dpi: Float = 99.0
+    var fov: Int = 360
+}
+
+// ===========================
+//  Boost XM8
+// ===========================
+struct BoostXM8 {
+    var isActive: Bool = false
+    var sensitivity: SensitivitySettings
+
+    mutating func start() {
+        self.isActive = true
+        print("✅ Boost XM8 iniciado com sensibilidade:", sensitivity)
+        // Aqui você aplicaria o hook para modificar os valores do jogo
+    }
+}
+
+// ===========================
+//  AimLock / AimBot
+// ===========================
+struct AimBot {
+    var isActive: Bool = false
+    var aimValue: Float = 0.45 // 45% de precisão
+
+    mutating func start() {
+        self.isActive = true
+        print("🎯 AimBot iniciado com valor:", aimValue)
+        // Hook para ativar AimLock
+    }
+}
+
+// ===========================
+//  No Recoil
+// ===========================
+struct NoRecoil {
+    var isActive: Bool = false
+
+    mutating func start() {
+        self.isActive = true
+        print("🔫 No Recoil ativado")
+        // Hook para remover recuo
+    }
+}
+
+// ===========================
+//  Uso
+// ===========================
+
+// Configurar Boost XM8
+var boostXM8 = BoostXM8(sensitivity: SensitivitySettings())
+boostXM8.start() // start do boost
+
+// Configurar AimBot
+var aimBot = AimBot()
+aimBot.start() // start do AimLock
+
+// Configurar No Recoil
+var noRecoil = NoRecoil()
+noRecoil.start() // start do No Recoil
