@@ -1,0 +1,36 @@
+def Start():
+    """Inicializa todas as configurações do script (exemplo educacional)."""
+    ConfigurationScript = {
+        "package": "com.dts.freefireth",
+        "mode": "INCREASE_HEADSHOT",
+        "mconfig": "script aimheadshot.xml",
+        "script": "aimlock.enemy~target HEAD",
+        "configuration": "dpi.screen",
+        "InputDelay": "110%",
+        "workingFps": 240,
+        "HighAimfovWeapons": True,
+        "headshotNocheat": "Enabled",
+        "scriptAimlock": "aimlock.js",
+        "scriptNobanned": "nobanned.js",
+        "configurationAimbot": "aimbot_config.xml",
+        "scriptEasyheadshot": "easyheadshot.js",
+        "scriptRedDamageNumbers": "reddamagenumbers.js",
+        "configurationAimfov": "aimfov_config.xml",
+        "EasyHeadshotHeadEnemy": "configurationAimbotEnemy",
+        "ConfigurationAsistiveHead": "easyheadshot.cpp",
+        "EasyRedNumbersUMP": 190.0,
+        "configurationUMP": "AIMBOT10%"
+    }
+
+    completion = {"result": "Success"}
+
+    print("=== Start Configuration ===")
+    for key, value in ConfigurationScript.items():
+        print(f"{key}: {value}")
+    print("============================")
+    print(f"Completion: {completion['result']}")
+
+
+# Executar o Start
+if __freefire__ == "__main__":
+    Start()
